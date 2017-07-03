@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.js', // string | object | array
@@ -17,6 +17,20 @@ module.exports = {
     // the filename template for entry chunks
 
    },
+
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "less-loader"
+        ]
+      }
+    ]
+  },
+
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()
   ]
