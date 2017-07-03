@@ -2,13 +2,24 @@ body {
   background-color: #ffcccc;
 }
 
+@font-size: 30px;
+
+
 .b-test {
   margin-top: 50px;
   padding: 30px;
   background: #fff;
 
   &__heading {
-    font-size: 30px;
+    font-size: @font-size;
     color: #f55c00;
+
+    & > div {
+      width: 25px;
+      height: 25px;
+      background-color: yellowgreen;
+    }
+
   }
+
 }
